@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .dropdown-anchor {
+    anchor-name: --dropdown;
+  }
+
+  .dropdown-base {
+    position: absolute;
+    position-anchor: --dropdown;
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  }
+
+
+  .dropdown-bottom {
+    top: anchor(bottom);
+    left: anchor(left);
+  }
+
+  .dropdown-top {
+    bottom: anchor(top);
+    left: anchor(left);
+  }
+
+  .dropdown-right {
+    top: anchor(top);
+    left: anchor(right);
+  }
+
+  .dropdown-left {
+    top: anchor(top);
+    right: anchor(left);
+  }
+
+  /* @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  } */
+
+}
